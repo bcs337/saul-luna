@@ -1,3 +1,37 @@
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #979797;
+    z-index: 1000;
+    padding: 15px 0;
+    border-bottom: 2px solid #34495e;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #3498db;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #ecf0f1;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    color: white;
+}
 body {
     background-color: #979797;
     color: #333333;
@@ -28,25 +62,61 @@ h2 {
     padding-bottom: 10px;
 }
 
+
 #Experience ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 #Experience li {
     background-color: #ecf0f1;
-    padding: 12px;
-    margin: 8px 0;
+    padding: 15px;
     border-radius: 5px;
     border-left: 4px solid #3498db;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.job-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+.job-dates {
+    font-style: italic;
+    color: #666;
+}
+
+
+#Connect {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgb(105, 105, 105);
+    border-radius: 8px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #Connect a {
-    display: inline-block;
     color: #3498db;
     text-decoration: none;
     font-weight: bold;
-    margin-right: 20px;
     padding: 10px 15px;
     background-color: #ecf0f1;
     border-radius: 5px;
@@ -56,12 +126,4 @@ h2 {
 #Connect a:hover {
     background-color: #3498db;
     color: white;
-}
-#Experience {
-    background-color: yellow !important;
-}
-
-#Connect a {
-    font-size: 30px !important;
-    color: red !important;
 }
