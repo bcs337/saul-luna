@@ -63,7 +63,7 @@ h2 {
 }
 
 
-#Experience ul {
+#experience ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -71,7 +71,7 @@ h2 {
     gap: 15px;
 }
 
-#Experience li {
+#experience li {
     background-color: #ecf0f1;
     padding: 15px;
     border-radius: 5px;
@@ -106,14 +106,14 @@ h2 {
     border-radius: 8px;
 }
 
-.social-links {
+social-links {
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-#Connect a {
+#connect a {
     color: #3498db;
     text-decoration: none;
     font-weight: bold;
@@ -123,7 +123,7 @@ h2 {
     transition: background-color 0.3s;
 }
 
-#Connect a:hover {
+#connect a:hover {
     background-color: #3498db;
     color: white;
 }
@@ -167,6 +167,19 @@ h2 {
     h2 {
         font-size: 1.6em;
     }
+    
+    footer {
+        padding: 1.2rem;
+    }
+    
+    #skills ul {
+        gap: 12px;
+    }
+    
+    #skills li {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
 }
 
 /* ===== MOBILE STYLES ===== */
@@ -200,6 +213,27 @@ h2 {
     h2 {
         font-size: 1.5em;
     }
+    
+    footer {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+    
+    #skills ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    #skills li {
+        width: 80%;
+        text-align: center;
+        padding: 10px 15px;
+    }
 }
 
 /* ===== DESKTOP STYLES (1024px and up) ===== */
@@ -217,5 +251,126 @@ h2 {
     section {
         max-width: 1000px;
         margin: 30px auto;
+    }
+    
+    footer {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 2rem;
+    }
+    
+    #skills ul {
+        max-width: 800px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+    
+    #skills li {
+        padding: 12px 18px;
+        font-size: 1rem;
+    }
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: rgb(105, 105, 105); 
+    border-top: 2px solid #3498db; 
+    border-radius: 8px; 
+    color: #2c3e50; 
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* ===== ENHANCED SKILLS SECTION ===== */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+#skills li {
+    background-color: #3498db; 
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px; 
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    transition: background-color 0.3s; 
+}
+
+#skills li:hover {
+    background-color: #2980b9; 
+    transform: translateY(-2px);
+}
+
+
+@media screen and (max-width: 1023px) {
+    
+    footer {
+        padding: 1.2rem;
+    }
+    
+    #skills ul {
+        gap: 12px;
+    }
+    
+    #skills li {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    footer {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+    
+    #skills ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    #skills li {
+        width: 80%;
+        text-align: center;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    footer {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 2rem;
+    }
+    
+    #skills ul {
+        max-width: 800px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+    
+    #skills li {
+        padding: 12px 18px;
+        font-size: 1rem;
     }
 }
