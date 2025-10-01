@@ -1,3 +1,4 @@
+
 const body = document.querySelector('body');
 const footer = document.createElement('footer');
 body.appendChild(footer);
@@ -30,8 +31,21 @@ messageForm.addEventListener('submit', function(event) {
   const usersEmail = event.target.usersEmail.value;
   const usersMessage = event.target.usersMessage.value;
   
+  console.log('Form values:', usersName, usersEmail, usersMessage);
+  
   const messageSection = document.getElementById('messages');
+  if (!messageSection) {
+    console.error('Messages section not found! Check your HTML for <section id="messages">');
+    return;
+  }
+  
   const messageList = messageSection.querySelector('ul');
+  if (!messageList) {
+    console.error('Message list (ul) not found! Check your HTML for <ul> inside the messages section');
+    return;
+  }
+  
+  console.log('Successfully found messageSection and messageList');
   
   const newMessage = document.createElement('li');
   
@@ -50,7 +64,6 @@ messageForm.addEventListener('submit', function(event) {
   });
   
   newMessage.appendChild(removeButton);
-  
   messageList.appendChild(newMessage);
   
   event.target.reset();
