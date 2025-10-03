@@ -6,7 +6,7 @@ const today = new Date();
 const thisYear = today.getFullYear();
 
 const copyright = document.createElement('p');
-copyright.innerHTML = `© Saul Acosta ${thisYear}`;
+copyright.innerHTML = `&copy; Saul Acosta ${thisYear}`;
 
 footer.appendChild(copyright);
 
