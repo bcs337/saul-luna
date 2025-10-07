@@ -1,4 +1,3 @@
-
 const body = document.querySelector('body');
 const footer = document.createElement('footer');
 body.appendChild(footer);
@@ -58,10 +57,10 @@ messageForm.addEventListener('submit', function(event) {
   removeButton.innerText = 'remove';
   removeButton.type = 'button';
   
-  removeButton.addEventListener('click', function() {
-    const entry = removeButton.parentNode;
-    entry.remove();
-  });
+removeButton.addEventListener('click', function() {
+  const entry = this.parentNode;
+  entry.remove();
+});
   
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
