@@ -37,7 +37,7 @@ messageForm.addEventListener('submit', function(event) {
   
   newMessage.innerHTML = `
     <a href="mailto:${usersEmail}">${usersName}</a>
-    <span> - Email: ${usersEmail}</span>
+    <span> - Email: <a href="mailto:${usersEmail}">${usersEmail}</a></span>
     <span> - Message: ${usersMessage}</span>
   `;
   
