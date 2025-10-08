@@ -26,41 +26,43 @@ const messageForm = document.querySelector('form[name="leave_message"]');
 messageForm.addEventListener('submit', function(event) {
   event.preventDefault();
   
+  console.log('Form submitted!');
+  
   const usersName = event.target.usersName.value;
   const usersEmail = event.target.usersEmail.value;
   const usersMessage = event.target.usersMessage.value;
   
-  console.log('Form values:', usersName, usersEmail, usersMessage);
+  console.log('Name:', usersName);
+  console.log('Email:', usersEmail);
+  console.log('Message:', usersMessage);
+  
+  if (!usersEmail) {
+    console.log('EMAIL IS EMPTY OR UNDEFINED!');
+  }
   
   const messageSection = document.getElementById('messages');
-  if (!messageSection) {
-    console.error('Messages section not found! Check your HTML for <section id="messages">');
-    return;
-  }
-  
   const messageList = messageSection.querySelector('ul');
-  if (!messageList) {
-    console.error('Message list (ul) not found! Check your HTML for <ul> inside the messages section');
-    return;
-  }
   
-  console.log('Successfully found messageSection and messageList');
+  console.log('Message section found:', messageSection);
+  console.log('Message list found:', messageList);
   
   const newMessage = document.createElement('li');
   
   newMessage.innerHTML = `
-    <a href="mailto:${usersEmail}">${usersName}</a>
-    <span>${usersMessage}</span>
+    <a href="mailto:${usersEmail}">${usersName}</a> - Email: ${usersEmail}
+    <span> - Message: ${usersMessage}</span>
   `;
+  
+  console.log('Created message HTML:', newMessage.innerHTML);
   
   const removeButton = document.createElement('button');
   removeButton.innerText = 'remove';
   removeButton.type = 'button';
   
-removeButton.addEventListener('click', function() {
-  const entry = this.parentNode;
-  entry.remove();
-});
+  removeButton.addEventListener('click', function() {
+    const entry = this.parentNode;
+    entry.remove();
+  });
   
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
