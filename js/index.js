@@ -26,34 +26,20 @@ const messageForm = document.querySelector('form[name="leave_message"]');
 messageForm.addEventListener('submit', function(event) {
   event.preventDefault();
   
-  console.log('Form submitted!');
-  
   const usersName = event.target.usersName.value;
   const usersEmail = event.target.usersEmail.value;
   const usersMessage = event.target.usersMessage.value;
   
-  console.log('Name:', usersName);
-  console.log('Email:', usersEmail);
-  console.log('Message:', usersMessage);
-  
-  if (!usersEmail) {
-    console.log('EMAIL IS EMPTY OR UNDEFINED!');
-  }
-  
   const messageSection = document.getElementById('messages');
   const messageList = messageSection.querySelector('ul');
-  
-  console.log('Message section found:', messageSection);
-  console.log('Message list found:', messageList);
   
   const newMessage = document.createElement('li');
   
   newMessage.innerHTML = `
-    <a href="mailto:${usersEmail}">${usersName}</a> - Email: ${usersEmail}
+    <a href="mailto:${usersEmail}">${usersName}</a>
+    <span> - Email: ${usersEmail}</span>
     <span> - Message: ${usersMessage}</span>
   `;
-  
-  console.log('Created message HTML:', newMessage.innerHTML);
   
   const removeButton = document.createElement('button');
   removeButton.innerText = 'remove';
