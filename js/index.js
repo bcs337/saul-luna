@@ -65,29 +65,7 @@ fetch('https://api.github.com/users/bcs337/repos')
   })
   .then(repositories => {
     console.log('GitHub repositories:', repositories);
-    displayRepositories(repositories);
   })
   .catch(error => {
     console.error('An error occurred while fetching repositories:', error);
-    displayError();
   });
-
-function displayRepositories(repositories) {
-  const projectSection = document.getElementById('projects');
-  const projectList = projectSection.querySelector('ul');
-  
-  projectList.innerHTML = '';
-  
-  for (let i = 0; i < repositories.length; i++) {
-    const project = document.createElement('li');
-    project.innerText = repositories[i].name;
-    projectList.appendChild(project);
-  }
-}
-
-function displayError() {
-  const projectSection = document.getElementById('projects');
-  const projectList = projectSection.querySelector('ul');
-  
-  projectList.innerHTML = '<li>Sorry, unable to load projects at this time.</li>';
-}
