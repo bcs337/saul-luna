@@ -31,6 +31,7 @@ nav a:hover {
     background-color: #3498db;
     color: white;
 }
+
 body {
     background-color: #979797;
     color: #333333;
@@ -60,7 +61,6 @@ h2 {
     border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
 }
-
 
 #Experience ul {
     list-style: none;
@@ -97,7 +97,6 @@ h2 {
     color: #666;
 }
 
-
 #Connect {
     margin: 20px 0;
     padding: 15px;
@@ -125,149 +124,6 @@ h2 {
 #Connect a:hover {
     background-color: #3498db;
     color: white;
-}
-
-/* ===== TABLET STYLES ===== */
-@media screen and (max-width: 1023px) {
-    nav ul {
-        gap: 20px;
-        flex-wrap: wrap;             
-    }
-    
-    h1 {
-        font-size: 2.2em;
-        margin-bottom: 25px;
-    }
-    
-    section {
-        padding: 12px;
-        margin: 15px 0;
-    }
-    
-    nav a {
-        padding: 10px 14px;
-        font-size: 0.9em;
-    }
-    
-    .experience-header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .job-title {
-        font-size: 1em;
-    }
-    
-    .social-links {
-        gap: 15px;
-        justify-content: center;
-    }
-    
-    h2 {
-        font-size: 1.6em;
-    }
-    
-    footer {
-        padding: 1.2rem;
-    }
-    
-    #skills ul {
-        gap: 12px;
-    }
-    
-    #skills li {
-        padding: 8px 12px;
-        font-size: 0.85rem;
-    }
-}
-
-/* ===== MOBILE STYLES ===== */
-@media screen and (max-width: 767px) {
-    nav ul {
-        flex-direction: column;      
-        gap: 10px;
-    }
-    
-    h1 {
-        font-size: 2em;
-        margin-bottom: 20px;
-    }
-    
-    .social-links {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav a {
-        padding: 12px 20px;
-        text-align: center;
-    }
-    
-    .experience-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-    
-    h2 {
-        font-size: 1.5em;
-    }
-    
-    footer {
-        padding: 1rem;
-        margin-top: 1rem;
-    }
-    
-    footer p {
-        font-size: 0.9rem;
-    }
-    
-    #skills ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    #skills li {
-        width: 80%;
-        text-align: center;
-        padding: 10px 15px;
-    }
-}
-
-/* ===== DESKTOP STYLES (1024px and up) ===== */
-@media screen and (min-width: 1024px) {
-    h1 {
-        font-size: 3em;
-        margin-bottom: 40px;
-    }
-    
-    nav ul {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    section {
-        max-width: 1000px;
-        margin: 30px auto;
-    }
-    
-    footer {
-        max-width: 1000px;
-        margin: 30px auto;
-        padding: 2rem;
-    }
-    
-    #skills ul {
-        max-width: 800px;
-        margin: 0 auto;
-        gap: 20px;
-    }
-    
-    #skills li {
-        padding: 12px 18px;
-        font-size: 1rem;
-    }
 }
 
 /* ===== FOOTER STYLES ===== */
@@ -313,65 +169,43 @@ footer p {
     transform: translateY(-2px);
 }
 
-
-@media screen and (max-width: 1023px) {
-    
-    footer {
-        padding: 1.2rem;
-    }
-    
-    #skills ul {
-        gap: 12px;
-    }
-    
-    #skills li {
-        padding: 8px 12px;
-        font-size: 0.85rem;
-    }
+/* ===== PROJECTS SECTION STYLES ===== */
+#projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    justify-content: center;
 }
 
-@media screen and (max-width: 767px) {
-    
-    footer {
-        padding: 1rem;
-        margin-top: 1rem;
-    }
-    
-    footer p {
-        font-size: 0.9rem;
-    }
-    
-    #skills ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    #skills li {
-        width: 80%;
-        text-align: center;
-        padding: 10px 15px;
-    }
+#projects li {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-@media screen and (min-width: 1024px) {
-    
-    footer {
-        max-width: 1000px;
-        margin: 30px auto;
-        padding: 2rem;
-    }
-    
-    #skills ul {
-        max-width: 800px;
-        margin: 0 auto;
-        gap: 20px;
-    }
-    
-    #skills li {
-        padding: 12px 18px;
-        font-size: 1rem;
-    }
+#projects li:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Error message styling */
+#projects li:only-child {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#projects li:only-child:hover {
+    background-color: #c0392b;
 }
 
 /* ===== MESSAGE FORM STYLES ===== */
@@ -503,8 +337,69 @@ footer p {
     background-color: #c0392b;
 }
 
-/* ===== RESPONSIVE UPDATES FOR MESSAGE FORM ===== */
+/* ===== TABLET STYLES ===== */
 @media screen and (max-width: 1023px) {
+    nav ul {
+        gap: 20px;
+        flex-wrap: wrap;             
+    }
+    
+    h1 {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+    
+    section {
+        padding: 12px;
+        margin: 15px 0;
+    }
+    
+    nav a {
+        padding: 10px 14px;
+        font-size: 0.9em;
+    }
+    
+    .experience-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .job-title {
+        font-size: 1em;
+    }
+    
+    .social-links {
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    footer {
+        padding: 1.2rem;
+    }
+    
+    #skills ul {
+        gap: 12px;
+    }
+    
+    #skills li {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    #projects ul {
+        gap: 12px;
+        margin: 15px 0;
+    }
+    
+    #projects li {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
     #leave-message,
     #messages {
         margin: 20px;
@@ -516,7 +411,73 @@ footer p {
     }
 }
 
+/* ===== MOBILE STYLES ===== */
 @media screen and (max-width: 767px) {
+    nav ul {
+        flex-direction: column;      
+        gap: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        padding: 12px 20px;
+        text-align: center;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    footer {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+    
+    #skills ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    #skills li {
+        width: 80%;
+        text-align: center;
+        padding: 10px 15px;
+    }
+    
+    #projects ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 15px 0;
+    }
+    
+    #projects li {
+        width: 80%;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    
     #leave-message,
     #messages {
         margin: 15px;
@@ -547,7 +508,51 @@ footer p {
     }
 }
 
+/* ===== DESKTOP STYLES (1024px and up) ===== */
 @media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 3em;
+        margin-bottom: 40px;
+    }
+    
+    nav ul {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    section {
+        max-width: 1000px;
+        margin: 30px auto;
+    }
+    
+    footer {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 2rem;
+    }
+    
+    #skills ul {
+        max-width: 800px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+    
+    #skills li {
+        padding: 12px 18px;
+        font-size: 1rem;
+    }
+    
+    #projects ul {
+        max-width: 800px;
+        margin: 25px auto;
+        gap: 18px;
+    }
+    
+    #projects li {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+    
     #leave-message,
     #messages {
         max-width: 1000px;

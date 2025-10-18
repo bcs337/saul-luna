@@ -6,7 +6,7 @@ const today = new Date();
 const thisYear = today.getFullYear();
 
 const copyright = document.createElement('p');
-copyright.innerHTML = `&copy; Saul Acosta ${thisYear}`;
+copyright.innerHTML = `© Saul Acosta ${thisYear}`;
 
 footer.appendChild(copyright);
 
@@ -55,3 +55,40 @@ messageForm.addEventListener('submit', function(event) {
   
   event.target.reset();
 });
+
+// GitHub API fetch for portfolio projects section
+fetch('https://api.github.com/users/bcs337/repos')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    return response.json();
+  })
+  .then(repositories => {
+    console.log('GitHub repositories:', repositories);
+    displayRepositories(repositories);
+  })
+  .catch(error => {
+    console.error('An error occurred while fetching repositories:', error);
+    displayError();
+  });
+
+function displayRepositories(repositories) {
+  const projectSection = document.getElementById('projects');
+  const projectList = projectSection.querySelector('ul');
+  
+  projectList.innerHTML = '';
+  
+  for (let i = 0; i < repositories.length; i++) {
+    const project = document.createElement('li');
+    project.innerText = repositories[i].name;
+    projectList.appendChild(project);
+  }
+}
+
+function displayError() {
+  const projectSection = document.getElementById('projects');
+  const projectList = projectSection.querySelector('ul');
+  
+  projectList.innerHTML = '<li>Sorry, unable to load projects at this time.</li>';
+}
